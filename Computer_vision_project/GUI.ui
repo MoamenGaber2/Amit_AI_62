@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Landscape Classifier</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f0f2f5;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #2c3e50; padding: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Landscape Image Classifier</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="browseButton">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         background-color: #3498db;
+         color: white;
+         border-radius: 5px;
+         padding: 10px;
+        </string>
+       </property>
+       <property name="text">
+        <string>Browse Image</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="predictButton">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         background-color: #2ecc71;
+         color: white;
+         border-radius: 5px;
+         padding: 10px;
+        </string>
+       </property>
+       <property name="text">
+        <string>Predict</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ensembleButton">
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         background-color: #9b59b6;
+         color: white;
+         border-radius: 5px;
+         padding: 10px;
+        </string>
+       </property>
+       <property name="text">
+        <string>Use Ensemble Model</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="mainContentLayout">
+     <item>
+      <widget class="QGraphicsView" name="imageView">
+       <property name="minimumSize">
+        <size>
+         <width>700</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         border: 2px solid #bdc3c7;
+         border-radius: 5px;
+         background-color: white;
+        </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="resultsLayout">
+       <item>
+        <widget class="QLabel" name="resultTitle">
+         <property name="font">
+          <font>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Classification Results</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="categoryLabel">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Category: </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="confidenceBar">
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="textVisible">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="confidenceLabel">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(138, 255, 247);</string>
+         </property>
+         <property name="text">
+          <string>Confidence: 0%</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="detailsText">
+         <property name="styleSheet">
+          <string notr="true">
+           background-color: white;
+           border: 1px solid #bdc3c7;
+           border-radius: 5px;
+           padding: 5px;
+          </string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
